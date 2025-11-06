@@ -4,7 +4,7 @@ import json
 
 class JSONRPCRequest(BaseModel):
     jsonrpc: str = Field('2.0', description='JSON-RPC version')
-    method: str = Field(..., description='Method to be invoked')
+    method: str = Field('chat', description='Method to be invoked')
     params: Optional[Union[Dict[str, Any], list]] = Field(None, 
                                                           description='Method parameters',
                                                           examples=[{
